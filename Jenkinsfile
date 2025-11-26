@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Checkout') { steps { git branch: 'main', url: 'YOUR_GITHUB_REPO_URL' } }
+    stage('Checkout') { steps { git branch: 'master', url: 'https://github.com/shabaz7323/cicd-nodejs-project.git' } }
     stage('Install Dependencies') { steps { sh 'npm install' } }
     stage('Run Tests') { steps { sh 'npm test' } }
     stage('Deploy to Server') { 
